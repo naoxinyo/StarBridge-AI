@@ -1,3 +1,12 @@
+> **星桥 AI / StarBridge AI：安卓真机测试分支（临时名称）**
+>
+> 本仓库基于 [WSK-build/DSHBox](https://github.com/WSK-build/DSHBox)，保留 GPL-3.0 许可与上游署名，属于独立改版。
+> 本版更换应用外观并加入多服务商 API 配置；未内置任何模型 API 密钥，尚未完成安卓真机验证。
+>
+> **[下载测试 APK](https://github.com/naoxinyo/StarBridge-AI/releases/tag/v1.5.0-starbridge.1)** · **[不填密钥的真机测试步骤](TESTING_STARBRIDGE.md)** · **[改版说明与构建](README_STARBRIDGE.md)**
+>
+> 以下保留上游项目介绍，其中上游下载和官网链接对应原版；本改版请使用上方测试 APK 链接。
+
 [English](README.en.md) | **简体中文**
 
 # DSHBox — Run DeepSeek Harness Locally on Android

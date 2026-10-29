@@ -35,7 +35,7 @@
     <string name="action_restart">重启</string>
     <string name="action_start">启动</string>
     <string name="action_stop">关闭</string>
-    <string name="app_name">DSHBox</string>
+    <string name="app_name">星桥 AI</string>
     <string name="archivebrowser_err_no_zstd_native">当前设备缺少 zstd 原生库（仅 arm64 真机支持 tar.zst），请使用外部应用打开</string>
     <string name="archivebrowser_err_open_failed">压缩包打开失败（文件可能损坏或格式不受支持）</string>
     <string name="archiveerr_default">压缩包无法解压</string>
@@ -671,8 +671,8 @@
 
     <!-- 新手引导（首次配置向导）：欢迎 / Debian 层 / Node.js 层 / 结束页 -->
     <string name="onboarding_skip">跳过引导</string>
-    <string name="onboarding_welcome_title">欢迎使用 DSHBox</string>
-    <string name="onboarding_welcome_sub">在你的设备上本地运行 DeepSeek Harness。无需 root，全程只需两步配置。</string>
+    <string name="onboarding_welcome_title">欢迎使用 星桥 AI</string>
+    <string name="onboarding_welcome_sub">在本机运行你的 AI 工作区，连接 OpenAI、Claude、Kimi、GLM 等模型。无需 root。</string>
     <string name="onboarding_feature_local_title">本地运行</string>
     <string name="onboarding_feature_local_desc">Debian 环境构建在你的设备内部，DSH 的对话与文件都留在本机。</string>
     <string name="onboarding_feature_privacy_title">不采集数据</string>

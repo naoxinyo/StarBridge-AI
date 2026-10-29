@@ -41,14 +41,14 @@ object AppThemeState {
     private const val PREFS_NAME = "app_settings"
     private const val KEY_THEME_MODE = "theme_mode"
 
-    var mode by mutableStateOf(ThemeMode.SYSTEM)
+    var mode by mutableStateOf(ThemeMode.DARK)
         private set
 
     fun load(context: Context) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         mode = runCatching {
-            ThemeMode.valueOf(prefs.getString(KEY_THEME_MODE, ThemeMode.SYSTEM.name) ?: ThemeMode.SYSTEM.name)
-        }.getOrDefault(ThemeMode.SYSTEM)
+            ThemeMode.valueOf(prefs.getString(KEY_THEME_MODE, ThemeMode.DARK.name) ?: ThemeMode.DARK.name)
+        }.getOrDefault(ThemeMode.DARK)
         // 冷启动窗口须在首个 Activity 创建前按持久化模式生效。
         applyNightMode(mode)
     }
@@ -95,8 +95,8 @@ private val LightColors = lightColorScheme(
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Accent,
-    onPrimary = DarkTextPrimary,
+    primary = Color(0xFF8CE5D7),
+    onPrimary = Color(0xFF073B3C),
     background = DarkBackground,
     onBackground = DarkTextPrimary,
     surface = DarkSurface,

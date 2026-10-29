@@ -231,6 +231,7 @@ class DefaultSandboxManager(
                     // 不会清理别人留下的锁，一次强杀就能让之后的启动全部失败。
                     sweepDeadWriterLocks()
                     val runtimeDir = runtimeCurrentDir()
+                    val prootEnv = buildProotEnv(runtimeDir, "dsh")
                     val command = processRunner.buildProotDshCommand(
                         prootBinary = prootBinary().absolutePath,
                         rootfsDir = baseRootfs().absolutePath,
@@ -243,7 +244,6 @@ class DefaultSandboxManager(
                         browserHostDir = browserHostDir(),
                         shareBinds = shareAreaBinds(),
                     )
-                    val prootEnv = buildProotEnv(runtimeDir, "dsh")
                     Log.i(TAG, "starting dsh proot")
                     dshProcess = processRunner.start(command, tag = "dsh", env = prootEnv, onRawLine = ::ingestDshWebLaunchToken)
                     Log.i(TAG, "dsh proot process started")
@@ -1160,6 +1160,7 @@ class DefaultSandboxManager(
      */
     private fun dshOverlayGuestPaths(): List<String> {
         return listOf(
+            ".dsh/starbridge/model-providers.yml" to "/root/projects/.dsh/starbridge/model-providers.yml",
             Constants.DSH_OFFICIAL_PLUGIN_OVERLAY_RELATIVE_PATH to
                 Constants.DSH_OFFICIAL_PLUGIN_OVERLAY_GUEST_PATH,
             Constants.DSH_PLUGIN_MARKET_OVERLAY_RELATIVE_PATH to Constants.DSH_PLUGIN_MARKET_OVERLAY_GUEST_PATH,
@@ -1277,6 +1278,7 @@ class DefaultSandboxManager(
             // circuits the lookup and the terminal starts without touching
             // /etc/passwd.
             base["SHELL"] = "/bin/bash"
+            base.putAll(config.dshEnvironmentProvider())
         }
         return base
     }
@@ -1432,6 +1434,7 @@ class DefaultSandboxManager(
         try {
             ensureRuntimePresent()
             val runtimeDir = runtimeCurrentDir()
+            val prootEnv = buildProotEnv(runtimeDir, "dsh")
             val command = processRunner.buildProotDshCommand(
                 prootBinary = prootBinary().absolutePath,
                 rootfsDir = baseRootfs().absolutePath,
@@ -1444,7 +1447,6 @@ class DefaultSandboxManager(
                 browserHostDir = browserHostDir(),
                 shareBinds = shareAreaBinds(),
             )
-            val prootEnv = buildProotEnv(runtimeDir, "dsh")
             dshProcess = processRunner.start(command, tag = "dsh", env = prootEnv, onRawLine = ::ingestDshWebLaunchToken)
             Log.i(TAG, "dsh proot restarted in place")
             true

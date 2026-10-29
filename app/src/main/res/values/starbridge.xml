@@ -1,0 +1,32 @@
+<resources>
+    <string name="models_title">Model services</string>
+    <string name="models_hero">One workspace. Your models.</string>
+    <string name="models_hero_detail">Keep your tools and sessions. Choose the model service for each conversation.</string>
+    <string name="models_apply_hint">Save your settings, restart the engine, then choose a model from the chat model menu.</string>
+    <string name="models_apply">Restart engine to apply</string>
+    <string name="models_restart_warning">Restarting interrupts the current task. Finish it before applying new model settings. The Linux runtime must be installed first.</string>
+    <string name="models_restarting">Engine restart requested. Check the home page for its status.</string>
+    <string name="models_configured">Configured · applies after restart</string>
+    <string name="models_disabled">Saved · disabled or missing key</string>
+    <string name="models_not_configured">Not configured</string>
+    <string name="models_edit">Edit service</string>
+    <string name="models_enable">Enable service</string>
+    <string name="models_endpoint">API base URL (HTTPS)</string>
+    <string name="models_protocol">API protocol</string>
+    <string name="models_ids">Model IDs · one per line</string>
+    <string name="models_catalog_hint">Leave empty to use the engine’s built-in model catalog. Enter IDs to replace that list.</string>
+    <string name="models_custom_hint">At least one exact model ID is required. Check your provider’s model list.</string>
+    <string name="models_key">API Key</string>
+    <string name="models_replace_key">New API Key · blank keeps existing</string>
+    <string name="models_key_hint">Saved keys are encrypted on this device. Keys are never included in configuration exports.</string>
+    <string name="models_clear_key">Clear saved API Key</string>
+    <string name="models_save">Save settings</string>
+    <string name="models_saving">Saving…</string>
+    <string name="models_saved">Saved. Restart the engine when you are ready to apply changes.</string>
+    <string name="models_save_failed">Could not save model settings.</string>
+    <string name="models_load_failed">Could not read model settings.</string>
+    <string name="models_remove">Remove service configuration</string>
+    <string name="models_remove_warning">Remove this service configuration and its saved key? Existing conversations stay on this device. Restart the engine to apply the change.</string>
+    <string name="starbridge_tagline">Your models. One local workspace.</string>
+    <string name="starbridge_upstream_updates">This is a StarBridge development build. App updates are managed separately from the original DSHBox release.</string>
+</resources>

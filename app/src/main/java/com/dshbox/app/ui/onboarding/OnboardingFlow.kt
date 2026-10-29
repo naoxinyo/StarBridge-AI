@@ -329,7 +329,7 @@ private fun WelcomePage(onStart: () -> Unit, onSkip: () -> Unit) {
             ) {
                 // 品牌标记必须用 Image 而不是 Icon：Icon 会按 tint 单色化，品牌绿会丢失。
                 Image(
-                    painter = painterResource(R.drawable.ic_splash_mark),
+                    painter = painterResource(R.drawable.starbridge_mark),
                     contentDescription = null,
                     modifier = Modifier
                         .size(welcomeMarkSize())

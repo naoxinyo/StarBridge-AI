@@ -489,18 +489,19 @@ private fun HomeBrandBar(
         // 品牌标记必须用 Image 而不是 Icon：Icon 会按 tint 把图形**单色化**，
         // 品牌绿与图形细节会一起丢失。
         Image(
-            painter = painterResource(R.mipmap.brand_icon),
+            painter = painterResource(R.drawable.starbridge_mark),
             contentDescription = null,
             modifier = Modifier
                 .size(30.dp)
                 .clip(RoundedCornerShape(8.dp)),
         )
         Spacer(modifier = Modifier.width(10.dp))
-        Text(
-            text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.onSurface,
-        )
+        Column {
+            Text(text = stringResource(R.string.app_name), style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface)
+            Text(text = stringResource(R.string.starbridge_tagline), style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
+        }
         Spacer(modifier = Modifier.weight(1f))
         IconButton(onClick = onNavigateToSettings) {
             Icon(

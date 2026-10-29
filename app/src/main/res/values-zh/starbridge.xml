@@ -1,0 +1,32 @@
+<resources>
+    <string name="models_title">模型服务</string>
+    <string name="models_hero">一个工作区，自由选择模型</string>
+    <string name="models_hero_detail">保留工具、文件和会话，为不同任务选择合适的模型服务。</string>
+    <string name="models_apply_hint">保存配置后重启内核，再到聊天页面的模型菜单中选择模型。</string>
+    <string name="models_apply">重启内核并应用配置</string>
+    <string name="models_restart_warning">重启会中断当前任务，请先结束任务再应用配置。首次使用需先安装 Linux 运行环境。</string>
+    <string name="models_restarting">已请求重启内核，请在首页查看启动状态。</string>
+    <string name="models_configured">已配置 · 重启后生效</string>
+    <string name="models_disabled">已保存 · 未启用或缺少密钥</string>
+    <string name="models_not_configured">尚未配置</string>
+    <string name="models_edit">编辑服务</string>
+    <string name="models_enable">启用服务</string>
+    <string name="models_endpoint">API 基础地址（HTTPS）</string>
+    <string name="models_protocol">API 协议</string>
+    <string name="models_ids">模型 ID · 每行一个</string>
+    <string name="models_catalog_hint">留空使用内核内置模型目录；填写后将替换该服务的模型列表。</string>
+    <string name="models_custom_hint">至少填写一个准确的模型 ID，请以服务商提供的模型列表为准。</string>
+    <string name="models_key">API Key</string>
+    <string name="models_replace_key">新 API Key · 留空保留已有密钥</string>
+    <string name="models_key_hint">密钥在本机加密保存，不会写入配置导出文件。</string>
+    <string name="models_clear_key">清除已保存的 API Key</string>
+    <string name="models_save">保存配置</string>
+    <string name="models_saving">正在保存…</string>
+    <string name="models_saved">配置已保存，准备好后重启内核即可生效。</string>
+    <string name="models_save_failed">模型配置保存失败。</string>
+    <string name="models_load_failed">模型配置读取失败。</string>
+    <string name="models_remove">移除服务配置</string>
+    <string name="models_remove_warning">移除此服务的配置和密钥？已有会话会保留在本机，重启内核后生效。</string>
+    <string name="starbridge_tagline">连接你的模型，留住你的工作区。</string>
+    <string name="starbridge_upstream_updates">当前为星桥 AI 开发版，应用更新独立于原版 DSHBox 发布。</string>
+</resources>

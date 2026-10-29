@@ -34,3 +34,6 @@ dist/
 app/src/main/assets/runtime/
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example

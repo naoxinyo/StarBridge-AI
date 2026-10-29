@@ -90,7 +90,7 @@ fun LaunchScreen(modifier: Modifier = Modifier) {
             contentAlignment = Alignment.Center,
         ) {
             Image(
-                painter = painterResource(R.drawable.ic_splash_mark),
+                painter = painterResource(R.drawable.starbridge_mark),
                 contentDescription = null,
                 colorFilter = ColorFilter.tint(Color.Black, BlendMode.SrcAtop),
                 modifier = Modifier.size(markSide),
@@ -98,7 +98,7 @@ fun LaunchScreen(modifier: Modifier = Modifier) {
         }
         // 标记本体：不加运行时光效，立体感来自素材本身。
         Image(
-            painter = painterResource(R.drawable.ic_splash_mark),
+            painter = painterResource(R.drawable.starbridge_mark),
             contentDescription = null,
             modifier = Modifier.size(markSide),
         )

@@ -46,7 +46,7 @@
     <string name="action_restart">Restart</string>
     <string name="action_start">Start</string>
     <string name="action_stop">Stop</string>
-    <string name="app_name">DSHBox</string>
+    <string name="app_name">StarBridge AI</string>
     <string name="archivebrowser_err_no_zstd_native">This device lacks the zstd native library (tar.zst is supported on arm64 devices only); open with an external app instead</string>
     <string name="archivebrowser_err_open_failed">Failed to open the archive (the file may be corrupted or the format is unsupported)</string>
     <string name="archiveerr_default">The archive could not be extracted</string>
@@ -682,8 +682,8 @@
 
     <!-- First-run setup wizard (onboarding): welcome / Debian layer / Node.js layer / finish -->
     <string name="onboarding_skip">Skip setup</string>
-    <string name="onboarding_welcome_title">Welcome to DSHBox</string>
-    <string name="onboarding_welcome_sub">Run DeepSeek Harness locally on your device. No root required, and setup takes only two steps.</string>
+    <string name="onboarding_welcome_title">Welcome to StarBridge AI</string>
+    <string name="onboarding_welcome_sub">Your local AI workspace for OpenAI, Claude, Kimi, GLM and more. No root required.</string>
     <string name="onboarding_feature_local_title">Runs locally</string>
     <string name="onboarding_feature_local_desc">The Debian environment is built inside your device; DSH conversations and files stay on this device.</string>
     <string name="onboarding_feature_privacy_title">No data collection</string>

@@ -57,7 +57,7 @@
     <string name="action_restart">Redémarrer</string>
     <string name="action_start">Démarrer</string>
     <string name="action_stop">Arrêter</string>
-    <string name="app_name">DSHBox</string>
+    <string name="app_name">StarBridge AI</string>
     <string name="archivebrowser_err_no_zstd_native">Cet appareil ne dispose pas de la bibliothèque native zstd (tar.zst n\'est pris en charge que sur les appareils arm64) ; ouvrez avec une application externe</string>
     <string name="archivebrowser_err_open_failed">Échec de l\'ouverture de l\'archive (le fichier est peut-être corrompu ou le format non pris en charge)</string>
     <string name="archiveerr_default">L\'archive n\'a pas pu être extraite</string>
@@ -691,7 +691,7 @@
 
     <!-- Assistant de configuration initiale (onboarding) : accueil / couche Debian / couche Node.js / fin -->
     <string name="onboarding_skip">Ignorer la configuration</string>
-    <string name="onboarding_welcome_title">Bienvenue dans DSHBox</string>
+    <string name="onboarding_welcome_title">Bienvenue dans StarBridge AI</string>
     <string name="onboarding_welcome_sub">Exécutez DeepSeek Harness localement sur votre appareil. Aucun accès root requis, la configuration ne compte que deux étapes.</string>
     <string name="onboarding_feature_local_title">Exécution locale</string>
     <string name="onboarding_feature_local_desc">L\'environnement Debian est construit à l\'intérieur de votre appareil ; les conversations et les fichiers de DSH restent sur cet appareil.</string>

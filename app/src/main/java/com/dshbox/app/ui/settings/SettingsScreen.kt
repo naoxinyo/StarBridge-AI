@@ -108,6 +108,7 @@ fun SettingsScreen(
     val scope = rememberCoroutineScope()
     val sandboxManager = (context.applicationContext as DshApp).container.sandboxManager
     var showDiagnostics by remember { mutableStateOf(false) }
+    var showModelProviders by remember { mutableStateOf(false) }
     var showLicenses by remember { mutableStateOf(false) }
     var showBatteryDialog by remember { mutableStateOf(false) }
     // 在线导入运行环境包（base/node 退出 APK 的主链路）：0=隐藏 1=入口页 2=Linux层 3=node层。
@@ -315,6 +316,11 @@ fun SettingsScreen(
         return
     }
 
+    if (showModelProviders) {
+        ModelProvidersScreen(onBack = { showModelProviders = false }, backEnabled = isActive, modifier = modifier)
+        return
+    }
+
     if (showLicenses) {
         LicensesScreen(onBack = { showLicenses = false }, backEnabled = isActive, modifier = modifier)
         return
@@ -354,6 +360,12 @@ fun SettingsScreen(
                 text = stringResource(R.string.tab_settings),
                 style = MaterialTheme.typography.titleLarge,
             )
+        }
+
+        SettingsSection(title = stringResource(R.string.models_title)) {
+            SettingsActionRow(title = stringResource(R.string.models_title), onClick = { showModelProviders = true })
+            Text(stringResource(R.string.starbridge_tagline), style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(12.dp))
         }
 
         SettingsSection(title = stringResource(R.string.settings_section_sandbox)) {
@@ -539,14 +551,7 @@ fun SettingsScreen(
             SettingsActionRow(
                 title = stringResource(R.string.settings_check_update),
                 onClick = {
-                    if (!updateChecking) {
-                        scope.launch {
-                            updateChecking = true
-                            updateCheckResult = AppUpdater.checkLatest()
-                            updateChecking = false
-                            showUpdateCheckDialog = true
-                        }
-                    }
+                    Toast.makeText(context, R.string.starbridge_upstream_updates, Toast.LENGTH_LONG).show()
                 },
             )
             SettingsDivider()

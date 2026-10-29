@@ -37,6 +37,8 @@ data class SandboxConfig(
      * 调用侧按存在性跳过，会话照常启动。
      */
     val shareBindsProvider: () -> List<Pair<String, File>> = { emptyList() },
+    /** Host-owned provider credentials, resolved only when launching the DSH role. */
+    val dshEnvironmentProvider: () -> Map<String, String> = { emptyMap() },
 ) {
     val runtimeDir: File = File(appFilesDir, "runtime")
     val sandboxDir: File = File(appFilesDir, "sandbox")

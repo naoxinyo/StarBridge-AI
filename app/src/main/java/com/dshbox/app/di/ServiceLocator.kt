@@ -26,6 +26,7 @@ object ServiceLocator {
             // 共享区绑定清单（内建 DSHBox + 用户挂载，guest `/root/share/<别名>`）：
             // 每次起会话现取，用户新授权或新增挂载无需重建配置。
             shareBindsProvider = { shareBinds(context) },
+            dshEnvironmentProvider = { com.dshbox.app.models.ModelProviderStore(context).environment() },
         )
         // 设备交互状态（唤醒且亮屏）交给健康循环：休眠期间 guest 会被整体冻结，
         // 端口在听但 HTTP 不应答，此时的探测失败是暂时状态，不该判为 DSH 宕机。
